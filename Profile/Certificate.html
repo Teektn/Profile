@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <style>
+        body {
+            background-image: radial-gradient(circle, rgba(9, 9, 39, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            font-family: Arial, sans-serif;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: space-between; 
+            height: 100vh; 
+            margin: 0; 
+            color: #fff;
+            transition: opacity 0.5s ease;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .n {
+            font-size: 60px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px; 
+        }
+
+        .certificate-box {
+            width: 150px;
+            height: 100px;
+            border: 3px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .certificate-box img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 24px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: auto;
+            padding: 20px;
+        }
+
+        .button {
+            background-color: #090927; 
+            border: none; 
+            color: rgb(170, 151, 255); 
+            padding: 15px 30px; 
+            text-align: center; 
+            text-decoration: none; 
+            font-family: Arial, sans-serif;
+            font-size: 18px; 
+            cursor: pointer; 
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffffff; 
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="n">Certificate</h1>
+    </header>
+    
+    <div class="description">
+        <h2>ใบรับรองที่ได้รับ</h2>
+        <p>นี่คือใบรับรองต่าง ๆ ที่ได้รับจากการเรียนรู้และพัฒนาทักษะในการเขียนโปรแกรมและการพัฒนาเว็บไซต์.</p>
+    </div>
+    
+    <div class="image-box">
+        <div class="certificate-box">
+            <img src="01.png" alt="Certificate 1">
+        </div>
+        <div class="certificate-box">
+            <img src="02.png" alt="Certificate 2">
+        </div>
+        <div class="certificate-box">
+            <img src="03.png" alt="Certificate 3">
+        </div>
+        <div class="certificate-box">
+            <img src="04.png" alt="Certificate 4">
+        </div>
+        <div class="certificate-box">
+            <img src="05.png" alt="Certificate 5">
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <a class="button" href="Profile.html" class="btn" onclick="fadeOut(event, 'Profile.html')">Back Home</a>
+        <a class="button" href="Hobbie.html" class="btn" onclick="fadeOut(event, 'Hobbie.html')">Hobbie</a>
+    </div>
+
+    <script>
+        function fadeOut(event, link) {
+            event.preventDefault(); 
+            document.body.classList.add('fade-out'); 
+            setTimeout(() => {
+                window.location.href = link;
+            }, 500);
+        }
+    </script>
+</body>
+</html>
